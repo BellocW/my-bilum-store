@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProShop Platform</title>
+    <title>PNG Bilums & Crafts Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <nav>
-            <div class="logo">ProShop</div>
+            <div class="logo">🌿 CraftPNG</div>
             <ul>
                 <li><button onclick="toggleDarkMode()" class="nav-btn">🌙 Mode</button></li>
                 <li><a href="#" onclick="toggleModal('login-modal')">Login</a></li>
                 <li><a href="#" id="cart-count" onclick="toggleModal('cart-modal')">Cart (0)</a></li>
-                <li><a href="#">Total: $<span id="cart-total">0.00</span></a></li>
+                <li><a href="#">Total: K<span id="cart-total">0.00</span></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Authentic PNG Bilums & Crafts</h1>
+            <h1>Authentic Handmade Bilums & Tropical Plants</h1>
             <div class="category-tabs">
-                <button class="tab-btn" onclick="filterByCategory('All')">All Items</button>
+                <button class="tab-btn" onclick="filterByCategory('All')">All</button>
                 <button class="tab-btn" onclick="filterByCategory('Bilums')">Bilums</button>
                 <button class="tab-btn" onclick="filterByCategory('Crafts')">Crafts</button>
                 <button class="tab-btn" onclick="filterByCategory('Plants')">Plants</button>
             </div>
-            <!-- ... rest of hero section ... -->
             <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search products..." onkeyup="filterProducts()">
+                <input type="text" id="search-input" placeholder="Search for bilums, plants..." onkeyup="filterProducts()">
             </div>
         </section>
 
         <section class="product-grid" id="product-container"></section>
 
         <section class="contact-section">
-            <h2>Contact Us</h2>
+            <h2>Contact the Maker</h2>
             <form id="contact-form" onsubmit="event.preventDefault(); alert('Message Sent!');">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="How can we help?"></textarea>
+                <textarea placeholder="Ask about custom bilum patterns or plant care..."></textarea>
                 <button type="submit" class="checkout-btn">Send Message</button>
             </form>
         </section>
@@ -53,12 +50,13 @@
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="toggleModal('cart-modal')">&times;</span>
-            <h2>Your Cart</h2>
+            <h2>Your Shopping Cart</h2>
             <div id="cart-items-list"></div>
-            <p><strong>Total: $<span id="modal-total">0.00</span></strong></p>
+            <hr>
+            <p><strong>Total: K<span id="modal-total">0.00</span></strong></p>
             <div class="modal-footer">
                 <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
-                <button onclick="alert('Proceeding to Checkout!')" class="checkout-btn">Checkout</button>
+                <button onclick="checkout()" class="checkout-btn">Order via WhatsApp</button>
             </div>
         </div>
     </div>
@@ -74,7 +72,11 @@
         </div>
     </div>
 
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me" target="_blank">Chat with us 💬</a>
+    </div>
+
     <script src="script.js"></script>
 </body>
-
 </html>
