@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PNG Bilums & Crafts Store</title>
+    <title>CraftPNG - Handmade Bilums & Plants</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,6 @@
             <div class="logo">🌿 CraftPNG</div>
             <ul>
                 <li><button onclick="toggleDarkMode()" class="nav-btn">🌙 Mode</button></li>
-                <li><a href="#" onclick="toggleModal('login-modal')">Login</a></li>
                 <li><a href="#" id="cart-count" onclick="toggleModal('cart-modal')">Cart (0)</a></li>
                 <li><a href="#">Total: K<span id="cart-total">0.00</span></a></li>
             </ul>
@@ -29,30 +28,46 @@
                 <button class="tab-btn" onclick="filterByCategory('Plants')">Plants</button>
             </div>
             <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search for bilums, plants..." onkeyup="filterProducts()">
+                <input type="text" id="search-input" placeholder="Search..." onkeyup="filterProducts()">
             </div>
         </section>
 
         <section class="product-grid" id="product-container"></section>
 
+        <!-- NEW: Sold Items Gallery -->
+        <section class="gallery-section">
+            <h2>Sold Gallery (Past Works)</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://unsplash.com" alt="Sold 1"><p>Sold to Port Moresby</p></div>
+                <div class="gallery-item"><img src="https://unsplash.com" alt="Sold 2"><p>Sold to Lae</p></div>
+            </div>
+        </section>
+
+        <!-- NEW: Testimonials -->
+        <section class="reviews">
+            <h2>What Customers Say</h2>
+            <div class="review-box">
+                <p>"The woolen bilum is so strong and beautiful. Perfect quality!"</p>
+                <span>- Sarah, Mt. Hagen</span>
+            </div>
+        </section>
+
         <section class="contact-section">
-            <h2>Contact the Maker</h2>
-            <form id="contact-form" onsubmit="event.preventDefault(); alert('Message Sent!');">
+            <h2>Contact & Custom Orders</h2>
+            <form onsubmit="event.preventDefault(); alert('Message Sent!');">
                 <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Ask about custom bilum patterns or plant care..."></textarea>
+                <textarea placeholder="Ask about custom patterns..."></textarea>
                 <button type="submit" class="checkout-btn">Send Message</button>
             </form>
         </section>
     </main>
 
-    <!-- Cart Modal -->
+    <!-- Modals & WhatsApp Float remain same as before -->
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="toggleModal('cart-modal')">&times;</span>
-            <h2>Your Shopping Cart</h2>
+            <h2>Your Cart</h2>
             <div id="cart-items-list"></div>
-            <hr>
             <p><strong>Total: K<span id="modal-total">0.00</span></strong></p>
             <div class="modal-footer">
                 <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
@@ -61,18 +76,6 @@
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="toggleModal('login-modal')">&times;</span>
-            <h2>Login</h2>
-            <input type="text" placeholder="Username" class="login-input">
-            <input type="password" placeholder="Password" class="login-input">
-            <button class="checkout-btn" style="width:100%" onclick="alert('Logged in!')">Sign In</button>
-        </div>
-    </div>
-
-    <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">
         <a href="https://wa.me" target="_blank">Chat with us 💬</a>
     </div>
