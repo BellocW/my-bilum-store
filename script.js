@@ -1,24 +1,50 @@
 const products = [
-    { id: 1, name: "Traditional Highland Bilum", price: 45.00, category: "Bilums", image: "https://unsplash.com" },
-    { id: 2, name: "Hand-Carved Sepik Mask", price: 150.00, category: "Crafts", image: "https://unsplash.com" },
-    { id: 3, name: "Tropical Fern Pot", price: 30.00, category: "Plants", image: "https://unsplash.com" },
-    { id: 4, name: "Natural Fiber Bilum", price: 65.00, category: "Bilums", image: "https://unsplash.com" },
-    { id: 5, name: "Clay Cooking Pot", price: 40.00, category: "Crafts", image: "https://unsplash.com" },
-    { id: 6, name: "Snake Plant (Low Light)", price: 35.00, category: "Plants", image: "https://unsplash.com" }
+    { 
+        id: 1, 
+        name: "Premium Woolen Highlands Bilum", 
+        price: 55.00, 
+        category: "Bilums", 
+        // TIP: Change "highland.jpg" to your actual photo filename once uploaded to GitHub
+        image: "highland.jpg", 
+        description: "Hand-knitted using durable wool. Features traditional diamond patterns from the Western Highlands."
+    },
+    { 
+        id: 2, 
+        name: "Sepik River 'Spirit' Mask", 
+        price: 180.00, 
+        category: "Crafts", 
+        image: "sepik_mask.jpg", 
+        description: "Authentic wood carving from the middle Sepik region. Treated for durability and indoor display."
+    },
+    { 
+        id: 3, 
+        name: "Bird of Paradise Flower Pot", 
+        price: 45.00, 
+        category: "Plants", 
+        image: "flower.jpg", 
+        description: "Healthy, locally grown Strelitzia in a decorative clay pot. Perfect for office or balcony."
+    },
+    { 
+        id: 4, 
+        name: "Natural 'Tree Bark' Fiber Bilum", 
+        price: 85.00, 
+        category: "Bilums", 
+        image: "natural_bilum.jpg", 
+        description: "100% organic fiber harvested and twisted by hand. A rare, traditional masterpiece."
+    }
 ];
 
-let cartItems = JSON.parse(localStorage.getItem('craftCart')) || [];
-let totalBill = cartItems.reduce((sum, item) => sum + item.price, 0);
-
+// Update the display function to show the descriptions
 function displayProducts(list) {
     const container = document.getElementById('product-container');
     container.innerHTML = ""; 
     list.forEach(product => {
         container.innerHTML += `
             <div class="product-card">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.name}" onerror="this.src='https://placeholder.com'">
                 <h3>${product.name}</h3>
-                <p>K${product.price.toFixed(2)}</p>
+                <p style="font-size: 0.9rem; color: #666; margin: 5px 0;">${product.description}</p>
+                <p><strong>K${product.price.toFixed(2)}</strong></p>
                 <button onclick="addToCart(${product.id})">Add to Cart</button>
             </div>`;
     });
