@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f6f2; /* Light creamy earth tone */
+    background-color: #f9f6f2;
     color: #333;
     transition: 0.3s;
 }
@@ -12,28 +12,25 @@ body.dark-mode {
     color: #f4f4f4;
 }
 
-/* Nav */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #4a3728; /* Deep brown */
+    background: #4a3728;
     color: white;
 }
 
 nav a { color: white; text-decoration: none; font-weight: bold; }
 .nav-btn { background: none; border: 1px solid white; color: white; cursor: pointer; padding: 5px 10px; border-radius: 5px; }
 
-/* Hero & Categories */
 .hero { text-align: center; padding: 3rem 1rem; }
 .category-tabs { margin: 20px 0; display: flex; justify-content: center; gap: 10px; }
 .tab-btn { padding: 10px 20px; border-radius: 20px; border: none; cursor: pointer; background: #ddd; }
 .tab-btn:hover { background: #6b8e23; color: white; }
 
-#search-input { padding: 12px; width: 300px; border-radius: 25px; border: 1px solid #ccc; }
+#search-input { padding: 12px; width: 300px; border-radius: 25px; border: 1px solid #ccc; outline: none; }
 
-/* Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -50,30 +47,26 @@ nav a { color: white; text-decoration: none; font-weight: bold; }
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-.dark-mode .product-card { background: #2a2a2a; }
+.dark-mode .product-card { background: #2a2a2a; border: 1px solid #444; }
 
 .product-card img { width: 100%; height: 230px; object-fit: cover; border-radius: 8px; }
 
-/* Buttons */
-button { cursor: pointer; transition: 0.2s; }
-.product-card button { background: #6b8e23; color: white; border: none; width: 100%; padding: 10px; border-radius: 5px; margin-top: 10px; }
-.remove-btn { background: #ff4d4d; color: white; border: none; padding: 2px 8px; border-radius: 4px; margin-left: 10px; }
-.clear-btn { background: #dc3545; color: white; border: none; flex: 1; padding: 10px; border-radius: 5px; }
-.checkout-btn { background: #28a745; color: white; border: none; flex: 1; padding: 10px; border-radius: 5px; }
+.product-card button { background: #6b8e23; color: white; border: none; width: 100%; padding: 10px; border-radius: 5px; margin-top: 10px; cursor: pointer; }
+.remove-btn { background: #ff4d4d; color: white; border: none; padding: 2px 8px; border-radius: 4px; margin-left: 10px; cursor: pointer; }
+.clear-btn { background: #dc3545; color: white; border: none; flex: 1; padding: 10px; border-radius: 5px; cursor: pointer; }
+.checkout-btn { background: #28a745; color: white; border: none; flex: 1; padding: 10px; border-radius: 5px; cursor: pointer; }
 
-/* Modals */
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
-.modal-content { background: white; margin: 10% auto; padding: 30px; width: 90%; max-width: 500px; border-radius: 15px; position: relative; }
+.modal-content { background: white; margin: 5% auto; padding: 30px; width: 90%; max-width: 500px; border-radius: 15px; position: relative; }
 .dark-mode .modal-content { background: #2a2a2a; }
 .close-btn { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+
 .cart-item-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; }
 .modal-footer { display: flex; gap: 10px; margin-top: 20px; }
 
-/* WhatsApp Float */
 .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; padding: 12px 20px; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
 .whatsapp-float a { color: white; text-decoration: none; font-weight: bold; }
 
-/* Contact Section */
 .contact-section { max-width: 600px; margin: 50px auto; padding: 30px; background: white; border-radius: 12px; }
 .dark-mode .contact-section { background: #2a2a2a; }
 .contact-section input, .contact-section textarea, .login-input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
