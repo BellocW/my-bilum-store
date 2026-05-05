@@ -70,3 +70,21 @@ nav a { color: white; text-decoration: none; font-weight: bold; }
 .contact-section { max-width: 600px; margin: 50px auto; padding: 30px; background: white; border-radius: 12px; }
 .dark-mode .contact-section { background: #2a2a2a; }
 .contact-section input, .contact-section textarea, .login-input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+
+/* PNG Brand Colors */
+nav { background: #006847; } /* PNG Green */
+.product-card button { background: #CE1126; } /* PNG Red */
+.tab-btn:hover { background: #F9BE00; color: black; } /* PNG Gold */
+
+/* Gallery Styling */
+.gallery-section { padding: 40px 20px; background: #eee; text-align: center; }
+.gallery-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.gallery-item { width: 150px; background: white; padding: 5px; border-radius: 5px; font-size: 12px; }
+.gallery-item img { width: 100%; height: 100px; object-fit: cover; }
+
+/* Review Styling */
+.reviews { padding: 40px 20px; text-align: center; background: #fff; }
+.review-box { max-width: 500px; margin: auto; font-style: italic; border-left: 4px solid #6b8e23; padding-left: 20px; text-align: left; }
+.review-box span { display: block; margin-top: 10px; font-weight: bold; font-style: normal; }
+
+/* All previous CSS remains same */
