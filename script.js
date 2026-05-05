@@ -1,5 +1,5 @@
 const products = [
-    { id: 1, name: "Traditional Woolen Bilum", price: 45.00, category: "Bilums", image: "https://unsplash.com" },
+    { id: 1, name: "Traditional Highland Bilum", price: 45.00, category: "Bilums", image: "https://unsplash.com" },
     { id: 2, name: "Hand-Carved Sepik Mask", price: 150.00, category: "Crafts", image: "https://unsplash.com" },
     { id: 3, name: "Tropical Fern Pot", price: 30.00, category: "Plants", image: "https://unsplash.com" },
     { id: 4, name: "Natural Fiber Bilum", price: 65.00, category: "Bilums", image: "https://unsplash.com" },
