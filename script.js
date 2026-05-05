@@ -112,3 +112,8 @@ function clearCart() {
 
 displayProducts(products);
 saveAndRefresh();
+// Add this to your Checkout button logic
+function checkout() {
+    let message = "Hi! I want to buy: " + cartItems.map(i => i.name).join(", ");
+    window.open(`https://wa.me{encodeURIComponent(message)}`);
+}
